@@ -28,10 +28,10 @@ internal static class ConsoleAnimation
     /// <summary>
     /// Writes the animated text to the console, character by character, with a delay between each character to create an animation effect.
     /// </summary>
-    public static void Write(AnimationType Animation = AnimationType.RigthToLeft)
+    public static void Write(AnimationType Animation = AnimationType.RightToLeft)
     {
         // Depending on the specified animation type, the method will either animate the text from left to right, right to left, top to bottom, or bottom to top. The animation is achieved by writing characters to the console in a specific order and introducing delays between writes to create a visual effect.
-        if (Animation == AnimationType.LeftToRight || Animation == AnimationType.RigthToLeft)
+        if (Animation == AnimationType.LeftToRight || Animation == AnimationType.RightToLeft)
         {
             // Split the animation text into lines and determine the maximum width of the lines to know how many columns to animate through
             var lines = AnimationText.Split("\n");
@@ -131,7 +131,7 @@ internal static class ConsoleAnimation
     public enum AnimationType
     {
         LeftToRight = 0,
-        RigthToLeft = 1,
+        RightToLeft = 1,
         TopToBottom = 2,
         BottomToTop = 3
     }
